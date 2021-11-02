@@ -57,7 +57,7 @@ public class MemesListAdapter extends BaseAdapter {
             holder.checkBox = (CheckBox) convertView.findViewById(R.id.checkBox);
 
             convertView.setTag(holder);
-        } else{
+        } else {
             holder = (ViewHolder)convertView.getTag();
         }
 

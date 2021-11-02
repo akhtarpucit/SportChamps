@@ -51,8 +51,6 @@ public class MainActivity extends Activity {
 
     private void bindData() {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        // TODO: 11/2/21
-//        addDummyData();
     }
 
     private void getDataFromApi() {
@@ -76,7 +74,7 @@ public class MainActivity extends Activity {
             @Override
             public void onFailure(Call<MemesApiResponse> call, Throwable t) {
                 progressBar.setVisibility(View.GONE);
-
+                showDialog(getString(R.string.api_failure), t.getMessage());
             }
         });
     }
@@ -86,5 +84,16 @@ public class MainActivity extends Activity {
         listViewMemes.setAdapter(adapterMemes);
     }
 
-
+    private void showDialog(String title, String message) {
+        AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+        alertDialog.setTitle(title);
+        alertDialog.setMessage(message);
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
+    }
 }

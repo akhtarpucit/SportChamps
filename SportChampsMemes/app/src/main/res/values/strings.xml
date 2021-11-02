@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">SportChamps Memes</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="api_failure">Failure</string>
 </resources>

@@ -5,8 +5,6 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
@@ -16,17 +14,11 @@ import com.eiconix.sportchampsmemes.api.ApiEndPoints;
 import com.eiconix.sportchampsmemes.api.MemesApiResponse;
 import com.eiconix.sportchampsmemes.api.RetrofitClient;
 import com.eiconix.sportchampsmemes.model.Meme;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends Activity {
 
